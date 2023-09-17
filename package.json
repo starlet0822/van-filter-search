@@ -2,7 +2,7 @@
   "name": "van-filter-search",
   "scope": "VanFilterSearch",
   "private": false,
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "A customizable filterSearch component base on vant for Vue.js 3.x.",
   "type": "module",
   "main": "./dist/van-filter-search.umd.js",

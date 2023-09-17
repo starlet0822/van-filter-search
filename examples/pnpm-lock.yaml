@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   van-filter-search:
-    specifier: ^0.1.12
-    version: 0.1.12(vant@4.6.6)(vue@3.3.4)
+    specifier: ^0.1.13
+    version: 0.1.13(vant@4.6.6)(vue@3.3.4)
   vant:
     specifier: ^4.6.3
     version: 4.6.6(vue@3.3.4)
@@ -2401,8 +2401,8 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /van-filter-search@0.1.12(vant@4.6.6)(vue@3.3.4):
-    resolution: {integrity: sha512-MzplRSkutf3JkxppcSglXV0Ys8aK7t9h7SpWLGoUG+uow2z5qnoc4bMoc0DEjHeac4CI6bd9+hxm3QSQ7Cj5EQ==}
+  /van-filter-search@0.1.13(vant@4.6.6)(vue@3.3.4):
+    resolution: {integrity: sha512-Q/aU8IF2tO4fyOePDBh/0rjW1vneaO8CVVOp0HaZgdqWr2iMwnfbfOXatntDibLnP62SMA21d8YTl3zY4fpipw==}
     peerDependencies:
       vant: 4.x
       vue: 3.x

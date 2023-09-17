@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "vant": "^4.6.3",
-    "van-filter-search": "^0.1.12",
+    "van-filter-search": "^0.1.13",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
