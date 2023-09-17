@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/vue@3.3.4/dist/vue.global.prod.js"></script>
+  <script src="https://unpkg.com/van-filter-search"></script>
+</head>
+
+<body>
+  <div id="app">
+    <van-filter-search title="筛选条件" :field-items="fieldItems" show-header />
+  </div>
+
+</body>
+<script>
+  const App = {
+    components: {
+      VanFilterSearch: window['van-filter-search'].VanFilterSearch
+    },
+    data() {
+      return {
+        fieldItems: [
+          {
+            type: 'InputField',
+            title: '关键词查询',
+            value: '',
+            name: 'keyword',
+            attrs: {
+              placeholder: '输入搜索关键词',
+            },
+          },
+          {
+            type: 'RadioField',
+            title: '任务状态',
+            value: '0',
+            name: 'status',
+            attrs: {
+              options: [
+                { text: '未审核', value: '-1' },
+                { text: '已审核', value: '0' },
+                { text: '未通过', value: '1' },
+                { text: '审核中', value: '2' },
+                { text: '已退回', value: '3' },
+              ],
+            },
+          },
+          {
+            type: 'CheckboxField',
+            title: '紧急程度',
+            value: [],
+            name: 'level',
+            attrs: {
+              options: [
+                { text: '普通', value: '0' },
+                { text: '重要', value: '1' },
+                { text: '紧急', value: '2' },
+                { text: '特急', value: '3' },
+              ],
+            },
+          },
+          {
+            type: 'DateField',
+            title: '创建时间',
+            value: '',
+            name: 'createTime',
+            attrs: {
+              placeholder: '选择时间',
+            },
+          },
+        ]
+      }
+    },
+  };
+  Vue.createApp(App).mount('#app');
+</script>
+
+</html>

@@ -1,0 +1,68 @@
+{
+  "name": "van-filter-search",
+  "scope": "VanFilterSearch",
+  "private": false,
+  "version": "0.1.12",
+  "description": "A customizable filterSearch component base on vant for Vue.js 3.x.",
+  "type": "module",
+  "main": "./dist/van-filter-search.umd.js",
+  "unpkg": "./dist/van-filter-search.umd.js",
+  "module": "./dist/van-filter-search.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/van-filter-search.es.js",
+      "require": "./dist/van-filter-search.umd.js"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "i": "pnpm install",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "patch:version": "npm version patch",
+    "publish:lib": "npm publish",
+    "clean": "pnpm clean:lib && pnpm clean:cache",
+    "clean:lib": "rimraf node_modules",
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vant",
+    "filter",
+    "filter-search",
+    "vue",
+    "vue.js",
+    "vue3-component",
+    "vue-component"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "wuxxing",
+    "email": "2411147266@qq.com"
+  },
+  "peerDependencies": {
+    "vant": "4.x",
+    "vue": "3.x"
+  },
+  "dependencies": {
+    "vant": "^4.6.7",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@vant/auto-import-resolver": "^1.0.1",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^1.3.3",
+    "rimraf": "^5.0.1",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.6.0",
+    "terser": "^5.19.4",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
+    "vite": "^4.4.5",
+    "vite-plugin-css-injected-by-js": "^3.3.0"
+  }
+}

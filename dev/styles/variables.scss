@@ -1,0 +1,36 @@
+/* 公共样式变量 */
+/*公共类前缀*/
+$prefix: 'st';
+/*字体大小*/
+$font10: var(--van-font-size-xs);
+$font12: var(--van-font-size-sm);
+$font14: var(--van-font-size-md);
+$font16: var(--van-font-size-lg);
+$font18: 18px;
+$fontBase: var(--font-size-base);
+// $font20: 20px;
+// $font22: 22px;
+// $font24: 24px;
+// $font26: 26px;
+// $font28: 28px;
+/*文字&背景&边框 颜色*/
+$colorRed: #ff0000;
+$colorBlue: var(--van-blue);
+$colorGreen: #05a081;
+$colorOrange: #f57921;
+$colorYellow: #ffb800;
+$colorBorder: var(--van-border-color);
+$colorBg: #f8f8f8; // 基础背景色
+$colorBlack: rgb(10, 9, 11); // #0A090B;
+$colorWhite: rgb(255, 255, 255); // #ffffff;
+$colorText: #333333; // 默认文字颜色
+$colorTip: #999999;
+$colorShadow: #e0e0e0; // 默认阴影颜色
+
+/**
+ * 其他
+*/
+
+:export {
+	themeColor: $colorBlue;
+}

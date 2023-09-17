@@ -1,0 +1,42 @@
+/**
+定制vant样式
+ */
+// 替换根css变量
+:root:root {
+	--font-size-base: 14px;
+	// 	--van-font-size-xs: 10px;
+	// --van-font-size-sm: 12px;
+	// --van-font-size-md: 14px;
+	// --van-font-size-lg: 16px;
+	/*Color*/
+	/*--van-gray-7: #333333!important;*/
+	/*--van-gray-8: #333333!important;*/
+	--van-blue: #2e6cf3;
+
+	// --van-font-size-xs: 0.26667rem;
+	// --van-font-size-sm: 0.32rem;
+	// --van-font-size-md: 18px !important;
+	// --van-font-size-lg: 0.42667rem;
+	/* van-cell & van-field */
+	// --colorText: #333333;
+	// --van-cell-text-color: var(--colorText) !important;
+	// --van-cell-value-color: var(--colorText) !important;
+	// --van-field-label-color: var(--colorText) !important;
+	// --van-cell-border-color: #e6e6e6 !important;
+
+	--van-back-top-z-index: 99 !important;
+}
+
+// 自定义vant样式
+body {
+	.van-picker-column__item {
+		// height: 44px !important;
+	}
+	.van-picker-column__item--selected {
+		// color: var(--van-blue);
+	}
+	// TODO 先这么处理 等官网解决
+	.van-back-top {
+		z-index: var(--van-back-top-z-index);
+	}
+}
