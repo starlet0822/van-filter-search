@@ -1,51 +1,24 @@
-# 将静态内容部署到 GitHub Pages 的简易工作流程
-name: Build and Deploy
-
+name: GitHub Actions Build and Deploy Demo        # 大标题
 on:
-  # 仅在推送到默认分支时运行。
   push:
-    branches: ['main']
-
-  # 这个选项可以使你手动在 Action tab 页面触发工作流
-  workflow_dispatch:
-
-# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages。
+    branches:
+      - main                                   # 监听哪个分支的哪个动作
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# 允许一个并发的部署
-concurrency:
-  group: 'pages'
-  cancel-in-progress: true
-
+  contents: write                                # 设置权限，可写，也可以不用配置，v4版本新增的
 jobs:
-  # 单次部署的工作描述
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+  build-and-deploy:                              # 其中一个任务的名称，ID
+    runs-on: ubuntu-latest                       # 这个任务运行所需的环境
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
+      - name: Checkout 🛎️                        # 第一步：获取源码
+        uses: actions/checkout@v3                # 使用的工具
+
+      - name: Install and Build 🔧               # 第二步：下载依赖和构建
+        run: |
+          yarn install
+          yarn build
+
+      - name: Deploy 🚀                         # 第三步：部署
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          node-version: 18
-          cache: 'pnpm'
-      - name: Install dependencies
-        run: pnpm install
-      - name: Build
-        run: pnpm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          # Upload dist repository
-          path: './examples/dist'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+          folder: examples/dist                         # 部署的目录
+          branch: gh-pages                     # 部署到哪个分支
