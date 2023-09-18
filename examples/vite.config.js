@@ -9,6 +9,7 @@ import { VantResolver } from '@vant/auto-import-resolver';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/examples/',
   plugins: [
     vue(),
     vueJsx(),

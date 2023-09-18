@@ -25,7 +25,8 @@
     "publish:lib": "npm publish",
     "clean": "pnpm clean:lib && pnpm clean:cache",
     "clean:lib": "rimraf node_modules",
-    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite"
+    "clean:cache": "rimraf node_modules/.cache/ && rimraf node_modules/.vite",
+    "examples:dev": "pnpm run -C examples dev"
   },
   "files": [
     "dist"
